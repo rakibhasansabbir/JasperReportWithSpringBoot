@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1"/>
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Student List</h2>
+        <a class="btn btn-danger" th:href="${'/report1'}" target="_blank">Generate Report</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Batch</th>
+            </tr>
+            </thead>
+            <tbody th:each="student :${students}">
+            <tr>
+                <td th:text="${student.name}">Doe</td>
+                <td th:text="${student.email}">john@example.com</td>
+                <td th:text="${student.batch}">john@example.com</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
