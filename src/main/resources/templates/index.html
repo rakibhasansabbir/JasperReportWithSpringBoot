@@ -22,6 +22,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Batch</th>
+                <th>Date</th>
             </tr>
             </thead>
             <tbody th:each="student :${students}">
@@ -29,6 +30,7 @@
                 <td th:text="${student.name}">Doe</td>
                 <td th:text="${student.email}">john@example.com</td>
                 <td th:text="${student.batch}">john@example.com</td>
+                <td th:text="${student.date}">john@example.com</td>
             </tr>
 
             </tbody>

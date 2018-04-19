@@ -7,13 +7,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Student {
 
     @Id
     @GeneratedValue
-    @NotEmpty
     private int id;
     @NotEmpty
     private String name;
@@ -23,14 +23,17 @@ public class Student {
     private String email;
     @NotEmpty
     private int batch;
+    @NotEmpty
+    private Date date;
 
     public Student() {
     }
 
-    public Student(String name, String email, int batch) {
+    public Student(String name, String email, int batch, Date date) {
         this.name = name;
         this.email = email;
         this.batch = batch;
+        this.date = date;
     }
 
     public int getId() {
@@ -65,6 +68,14 @@ public class Student {
         this.batch = batch;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -72,6 +83,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", batch=" + batch +
+                ", date=" + date +
                 '}';
     }
 }
