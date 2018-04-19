@@ -33,7 +33,7 @@ public class StudentController {
     @GetMapping("/report1")
     private ModelAndView report1() {
         JasperReportsPdfView view = new JasperReportsPdfView();
-        view.setUrl("classpath:/reports/report1.jrxml");
+        view.setUrl("classpath:templates/reports/report1.jrxml");
         view.setApplicationContext(applicationContext);
 
         Map<String, Object> params = new HashMap<String, Object>();
