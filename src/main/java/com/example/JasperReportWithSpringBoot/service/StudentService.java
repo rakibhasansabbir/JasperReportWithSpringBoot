@@ -25,7 +25,7 @@ public class StudentService {
             Map<String,Object> item = new HashMap<String,Object>();
             item.put("id",student.getId());
             item.put("name",student.getName());
-            item.put("eamil",student.getEmail());
+            item.put("email",student.getEmail());
             item.put("batch",student.getBatch());
             result.add(item);
         }
